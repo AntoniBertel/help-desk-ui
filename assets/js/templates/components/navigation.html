@@ -1,0 +1,17 @@
+<div class="navigation-container">
+  <nav class="top-bar">
+    <section class="authorization-container top-bar-section">
+      <ul class="right">
+        <li ng-show="!isAuthorized">
+          <a ui-sref="register" class="button success" translate="directives.navigation.register"></a>
+          <a ui-sref="login" class="button" translate="directives.navigation.login"></a>
+        </li>
+        <li ng-show="isAuthorized">
+          <a ui-sref="profile" class="button">{{userName}}</a>
+          <a class="button secondary" translate="directives.navigation.settings"></a>
+          <a class="button secondary" translate="directives.navigation.logout"></a>
+        </li>
+      </ul>
+    </section>
+  </nav>
+</div>
