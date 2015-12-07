@@ -18,13 +18,16 @@ helpdesk.config(($stateProvider, $urlRouterProvider, $translateProvider, userRol
   }).state('register', {
     url: '/register',
     templateUrl: 'assets/js/templates/register.html',
-    accessPermissions: [userRolesConstant.all],
     params: {
       redirectToState: 'home'
     }
   }).state('profile', {
     url: '/profile',
     templateUrl: 'assets/js/templates/profile.html',
+    accessPermissions: [userRolesConstant.all]
+  }).state('issues', {
+    url: '/issues',
+    templateUrl: 'assets/js/templates/issues.html',
     accessPermissions: [userRolesConstant.all]
   }).state('notFound', {
     url: '/not-found',
@@ -34,6 +37,12 @@ helpdesk.config(($stateProvider, $urlRouterProvider, $translateProvider, userRol
     templateUrl: 'assets/js/templates/forbidden.html'
   }).state('home', {
     url: '/'
+  }).state('logout', {
+    url: '/logout',
+    params: {
+      redirectToState: 'home'
+    },
+    controller: 'logoutController'
   });
 
   $translateProvider.useStaticFilesLoader({
@@ -44,6 +53,12 @@ helpdesk.config(($stateProvider, $urlRouterProvider, $translateProvider, userRol
   $translateProvider.useSanitizeValueStrategy('escape');
   $translateProvider.useLocalStorage();
 });
+
+/**
+ * Controllers
+ */
+import logoutController from './controllers/logout';
+helpdesk.controller('logoutController', logoutController);
 
 /**
  * Components

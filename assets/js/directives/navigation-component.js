@@ -6,7 +6,7 @@ var navigationComponent = (authorizationFactory) => {
     scope: {},
     replace: true,
     link: function($scope) {
-      if(authorizationFactory.isAuthorized) {
+      if(authorizationFactory.isAuthorized()) {
         $scope.isAuthorized = true;
         $scope.userName = "Firstname Lastname";
       }

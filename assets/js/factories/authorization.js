@@ -13,8 +13,12 @@ var authorizationService = function(userFactory, userSessionService, userRolesCo
      * @returns {object}
      */
     login: function(credentials) {
-      userFactory.login(credentials.email, credentials.password);
-      userSessionService.create('commo', 'token').save();
+      userFactory.login(credentials.email, credentials.password).then((response) => {
+        var response = response;
+      }).catch((response) => {
+        var response = response;
+      });
+      userSessionService.create(userRolesConstant.common, 'token').save();
       return userSessionService.getUser();
     },
     /**
