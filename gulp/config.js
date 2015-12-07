@@ -16,6 +16,11 @@ const gulpConfiguration = {
       dest: `${common.dest}/styles`,
       watch: `${common.src}/css/*.css`
     },
+    sass: {
+      src: `${common.src}/sass/styles.scss`,
+      dest: `${common.dest}/styles`,
+      watch: `${common.src}/sass/*.scss`
+    },
     connect: {
       root: './',
       port: '8888'

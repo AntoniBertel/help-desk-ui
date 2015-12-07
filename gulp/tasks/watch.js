@@ -8,4 +8,7 @@ gulp.task('watch', ['connect'], () => {
   gulp.watch(configuration.tasks.styles.watch, () => {
     gulp.run('styles');
   });
+  gulp.watch(configuration.tasks.sass.watch, () => {
+    gulp.run('sass');
+  });
 });
