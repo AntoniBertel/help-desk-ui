@@ -4,6 +4,7 @@ import importcss from 'gulp-import-css';
 import cssmin from 'gulp-cssmin';
 import cssnano from 'gulp-cssnano';
 import configuration from '../config';
+import promise from 'es6-promise';
 
 gulp.task('styles', () => {
   return gulp.src(configuration.tasks.styles.src)

@@ -47,6 +47,7 @@
     "angular-translate-storage-cookie": "^2.8.1",
     "angular-translate-storage-local": "^2.8.1",
     "angular-ui-router": "^0.2.15",
+    "es6-promise": "^3.0.2",
     "gulp-cssnano": "^2.0.0",
     "gulp-sass": "^2.1.0",
     "lodash": "^3.10.1"

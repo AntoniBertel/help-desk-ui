@@ -1,0 +1,3 @@
+@include breakpoint-set('no query fallbacks', true);
+@include breakpoint-set('to ems', true);
+@include add-breakpoint('smartphone', 220px);
