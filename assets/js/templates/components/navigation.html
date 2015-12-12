@@ -1,15 +1,27 @@
 <div class="navigation-container">
-  <nav class="top-bar">
-    <section class="authorization-container top-bar-section">
-      <ul class="right">
-        <li ng-show="!isAuthorized">
-          <a ui-sref="register" class="button success" translate="directives.navigation.register"></a>
-          <a ui-sref="login" class="button" translate="directives.navigation.login"></a>
+  <nav class="navigation">
+    <header class="left">Helpdesk</header>
+    <section class="navigation-elements right">
+      <ul>
+        <li class="navigation-element">
+          <a>Gallery</a>
         </li>
-        <li ng-show="isAuthorized">
-          <a ui-sref="profile" class="button">{{userName}}</a>
-          <a class="button secondary" translate="directives.navigation.settings"></a>
-          <a ui-sref="logout" class="button secondary" translate="directives.navigation.logout"></a>
+        <li class="navigation-element">
+          <a>About</a>
+        </li>
+        <li class="navigation-element">
+          <a>Log in</a>
+        </li>
+        <li class="navigation-element">
+          <a class="button">Sign up</a>
+        </li>
+        <li class="navigation-element">
+          <a class="notifications button">
+            <span class="badge">5</span>
+          </a>
+        </li>
+        <li class="navigation-element menu">
+          <a class="button"></a>
         </li>
       </ul>
     </section>

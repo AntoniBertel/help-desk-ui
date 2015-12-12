@@ -19,7 +19,7 @@ const gulpConfiguration = {
     sass: {
       src: `${common.src}/sass/styles.scss`,
       dest: `${common.dest}/styles`,
-      watch: `${common.src}/sass/*.scss`
+      watch: `${common.src}/sass/**/**.scss`
     },
     connect: {
       root: './',
