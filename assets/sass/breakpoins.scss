@@ -1,11 +1,2 @@
-// Breakpoints configuration
-@include breakpoint-set('no query fallbacks', true);
-@include breakpoint-set('to ems', true);
-
-// Breakpoints
-@include add-breakpoint('smartphone', 319px);
-@include add-breakpoint('smartphone-landscape', (320px 479px));
-@include add-breakpoint('tablet', (480px 767px));
-@include add-breakpoint('tablet-landscape', (768px 1023px));
-@include add-breakpoint('desktop', (1024px 1199px));
-@include add-breakpoint('desktop-large', 1200px);
+$breakpoint-small: 320px;
+$breakpoint-small-retina: 360px;

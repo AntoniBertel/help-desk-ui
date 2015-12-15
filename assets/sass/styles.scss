@@ -1,16 +1,6 @@
-// Utilities
-@import "utilities/compass-breakpoint/stylesheets/breakpoint";
-@import "utilities/bourbon/bourbon";
-
 // Variables
 @import "breakpoins";
 @import "variables";
 
-// Mixins
-@import "mixins/button";
-
-// SMACSS
-@import "base/base";
-@import "layout/layouts";
-@import "modules/modules";
-@import "modules/modules";
+// BEM
+@import "blocks/blocks";

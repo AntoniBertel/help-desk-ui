@@ -19,7 +19,23 @@ const gulpConfiguration = {
     sass: {
       src: `${common.src}/sass/styles.scss`,
       dest: `${common.dest}/styles`,
-      watch: `${common.src}/sass/**/**.scss`
+      watch: `${common.src}/sass/**/**`
+    },
+    images: {
+      src: `${common.src}/img/*.*`,
+      dest: `${common.dest}/images`,
+      watch: `${common.src}/img/*.*`
+    },
+    svg: {
+      src: `${common.src}/img/svg/**/**`,
+      dest: `${common.dest}/images/svg`,
+      watch: `${common.src}/img/svg/**/**`
+    },
+    sprites: {
+      src: `${common.src}/img/icon/*.png`,
+      dest: `${common.src}/sass/mixins`,
+      bundleImage: 'sprites.png',
+      bundleStyle: 'sprites.css'
     },
     connect: {
       root: './',

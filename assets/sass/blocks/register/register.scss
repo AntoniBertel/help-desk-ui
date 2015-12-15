@@ -1,0 +1,83 @@
+.register {
+  padding: 36px 20px;
+}
+
+.register__title__main {
+  font-size: 32px;
+  color: $color-gray-dark;
+  font-weight: 700;
+  @media(min-width: $breakpoint-small-retina) {
+    font-size: 225%; // 36/16
+  }
+}
+
+.register__title__description {
+  margin: 8px 0 0 0;
+  color: $color-gray-light;
+  font-size: 125%; // 20/16
+}
+
+.register__description__link {
+  color: $color-blue;
+  cursor: pointer;
+}
+
+.register__input-group {
+  margin: 32px 0 0 0;
+  @media(min-width: $breakpoint-small-retina) {
+    position: relative;
+  }
+}
+
+.register__input-group:nth-child(3) {
+  margin-bottom: 35px;
+}
+
+.register__input-group__failure {
+  padding: 12px 19px;
+  border-radius: 4px;
+  color: $color-white;
+  background-color: $color-red;
+  @media(min-width: $breakpoint-small-retina) {
+    padding: 12px 19px;
+    right: 34px;
+    bottom: 98px;
+    position: absolute;
+  }
+}
+
+.register__input-group__title {
+  color: $color-gray-dark;
+  font-weight: 700;
+}
+
+.register__input-group__input {
+  margin: 6px 0 0 0;
+  max-width: 400px;
+  width: 90%; //360/400
+  padding: 12px 13px;
+  height: 40px;
+  border: 1px solid $color-gray-light;
+  border-radius: 4px;
+  color: $color-gray-dark-light;
+}
+
+.register__input-group__input:focus {
+  border: 1px solid $color-blue;
+}
+
+.register__input-group__input_is-completed {
+  background-color: $color-white-dark;
+}
+
+.register__input-group__input_is_error {
+  background: $color-red;
+}
+
+.register__input-group__description {
+  max-width: 365px;
+  width: 90%; // 323/400
+  margin: 8px 0 0 3px;
+  font-size: 87.5%; // 14/16
+  color: $color-gray-light;
+}
