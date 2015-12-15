@@ -24,9 +24,6 @@
 
 .register__input-group {
   margin: 32px 0 0 0;
-  @media(min-width: $breakpoint-small-retina) {
-    position: relative;
-  }
 }
 
 .register__input-group:nth-child(3) {
@@ -34,27 +31,45 @@
 }
 
 .register__input-group__failure {
+  margin: 10px 0 2px 0;
   padding: 12px 19px;
   border-radius: 4px;
   color: $color-white;
+  display: inline-block;
+  position: relative;
   background-color: $color-red;
-  @media(min-width: $breakpoint-small-retina) {
-    padding: 12px 19px;
-    right: 34px;
-    bottom: 98px;
-    position: absolute;
+  @media(min-width: $breakpoint-medium) {
+    margin: 0 0 0 14px;
+  }
+}
+
+.register__input-group__failure::after {
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid $color-red;
+  border-left: 5px solid transparent;
+  bottom: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  @media(min-width: $breakpoint-medium) {
+    border-top: 5px solid transparent;
+    border-right: 5px solid $color-red;
+    border-bottom: 5px solid transparent;
+    right: 100%;
+    bottom: 40%;
   }
 }
 
 .register__input-group__title {
+  margin: 0 0 0 4px;
   color: $color-gray-dark;
   font-weight: 700;
 }
 
 .register__input-group__input {
-  margin: 6px 0 0 0;
   max-width: 400px;
-  width: 90%; //360/400
+  width: 100%;
+  margin: 6px 0 0 0;
   padding: 12px 13px;
   height: 40px;
   border: 1px solid $color-gray-light;
@@ -75,9 +90,20 @@
 }
 
 .register__input-group__description {
-  max-width: 365px;
-  width: 90%; // 323/400
+  max-width: 335px;
   margin: 8px 0 0 3px;
   font-size: 87.5%; // 14/16
   color: $color-gray-light;
+}
+
+.register__submit-spinner {
+  margin: 0 0 0 10px;
+  font-size: 20px;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }

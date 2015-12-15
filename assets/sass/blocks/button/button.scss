@@ -7,6 +7,10 @@
   transition: backgroud-color, .5s, linear;
 }
 
+.button_is-inactive {
+  background-color: $color-gray-light;
+}
+
 .button:hover {
   background-color: $color-blue-light;
 }

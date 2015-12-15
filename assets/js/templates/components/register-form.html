@@ -1,94 +1,68 @@
 <div class="register">
   <header class="register__title">
-    <h1 class="register__title__main">Create an Account</h1>
-    <h2 class="register__title__description">Join Helpdesk world. If you already have an Accout just
-      <a class="register__description__link">click here.</a>
+    <h1 class="register__title__main" translate="directives.register.title"></h1>
+    <h2 class="register__title__description"> {{ 'directives.register.titleDescription' | translate}}
+      <a class="register__description__link" translate="directives.register.titleDescriptionLink"></a>
     </h2>
   </header>
   <section class="register__container">
-    <form name="registerForm">
+    <form name="registerForm" name="registerForm" ng-submit="submit()" novalidate>
       <section class="register__input-group">
-        <h1 class="register__input-group__title">E-Mail</h1>
-        <input type="email" class="register__input-group__input">
-        <footer class="register__input-group__description">
-          You will occasionally receive account related emails. We promise not to share your email with anyone.
-        </footer>
-      </section>
-      <section class="register__input-group">
-        <span class="register__input-group__failure">
-          Password doesnt match
+        <h1 class="register__input-group__title" translate="directives.register.email"></h1>
+        <input class="register__input-group__input"
+               type="email"
+               name="email"
+               placeholder="Email"
+               ng-model="register.email"
+               ng-model-options="{ debounce: 500 }"
+               required>
+        <span class="register__input-group__failure"
+              ng-show="(registerForm.$submitted || registerForm.email.$touched) && registerForm.email.$error.required"
+              translate="directives.register.emailRequired">
         </span>
-        <h1 class="register__input-group__title">E-Mail</h1>
-        <input type="email" class="register__input-group__input">
-        <footer class="register__input-group__description">
-          You will occasionally receive account related emails. We promise not to share your email with anyone.
-        </footer>
+        <span class="register__input-group__failure"
+              ng-show="(registerForm.$submitted || registerForm.email.$touched) && registerForm.email.$error.email"
+              translate="directives.register.emailInvalid">
+        </span>
+        <footer class="register__input-group__description" translate="directives.register.emailDescription"></footer>
+      </section>
+      <section class="register__input-group">
+        <h1 class="register__input-group__title" translate="directives.register.password"></h1>
+        <input class="register__input-group__input" type="password"
+               name="password"
+               placeholder="Password"
+               ng-model="register.password"
+               ng-model-options="{ debounce: 500 }"
+               ng-minlength="3"
+               required>
+        <span class="register__input-group__failure"
+              ng-show="(registerForm.$submitted || registerForm.password.$touched) && registerForm.password.$error.minlength"
+              translate="directives.register.passwordShort">
+        </span>
+        <span class="register__input-group__failure"
+              ng-show="(registerForm.$submitted || registerForm.password.$touched) && registerForm.password.$error.required"
+              translate="directives.register.passwordRequired">
+        </span>
+        <footer class="register__input-group__description" translate="directives.register.passwordDescription"></footer>
       </section>
       <section class="register__input-group">
         <h1 class="register__input-group__title">E-Mail</h1>
-        <input type="email" class="register__input-group__input">
-        <footer class="register__input-group__description">
-          You will occasionally receive account related emails. We promise not to share your email with anyone.
-        </footer>
+        <input class="register__input-group__input"
+               type="password"
+               name="confirm"
+               placeholder="Confirm password"
+               ng-model="register.passwordConfirm"
+               ng-model-options="{ debounce: 500 }"
+               ng-minlength="3"
+               repeat-password="register.password"
+               required>
+        <span class="register__input-group__failure"
+              ng-show="(registerForm.$submitted || registerForm.confirm.$touched) && registerForm.confirm.$error.match"
+              translate="directives.register.passwordConfirm">
+        </span>
       </section>
-      <input type="submit" class="button" value="Sign up">
+      <input type="submit" class="button" translate translate-attr-value="directives.register.submit">
+      <i class="register__submit-spinner fa fa-spinner" ng-show="registerForm.$pending"></i>
     </form>
   </section>
-  <!--<header>-->
-    <!--<h1 translate="directives.register.title"></h1>-->
-  <!--</header>-->
-  <!--<form name="registerForm" ng-submit="submit()" novalidate>-->
-    <!--<div class="group-errors">-->
-      <!--<span ng-show="submitMessage">-->
-        <!--<small class="error">-->
-          <!--{{submitMessage}}-->
-        <!--</small>-->
-      <!--</span>-->
-    <!--</div>-->
-    <!--<div class="form-group">-->
-      <!--<input type="email"-->
-             <!--name="email"-->
-             <!--placeholder="Email"-->
-             <!--ng-model="register.email"-->
-             <!--ng-model-options="{ debounce: 500 }"-->
-             <!--required>-->
-      <!--<div class="group-errors" ng-show="registerForm.$submitted || registerForm.email.$touched">-->
-        <!--<span ng-show="registerForm.email.$error.required">-->
-          <!--<small class="error" translate="directives.register.emailRequired"></small>-->
-        <!--</span>-->
-        <!--<span ng-show="registerForm.email.$error.email">-->
-          <!--<small class="error" translate="directives.register.emailInvalid"></small>-->
-        <!--</span>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="form-group">-->
-      <!--<input type="password"-->
-             <!--name="password"-->
-             <!--placeholder="Password"-->
-             <!--ng-model="register.password"-->
-             <!--ng-model-options="{ debounce: 500 }"-->
-             <!--ng-minlength="3"-->
-             <!--required>-->
-      <!--<input type="password"-->
-             <!--name="confirm"-->
-             <!--placeholder="Confirm password"-->
-             <!--ng-model="register.passwordConfirm"-->
-             <!--ng-model-options="{ debounce: 500 }"-->
-             <!--ng-minlength="3"-->
-             <!--repeat-password="register.password"-->
-             <!--required>-->
-      <!--<div class="group-errors" ng-show="registerForm.$submitted || registerForm.password.$touched">-->
-        <!--<span ng-show="registerForm.password.$error.minlength">-->
-          <!--<small class="error" translate="directives.register.passwordShort"></small>-->
-        <!--</span>-->
-        <!--<span ng-show="registerForm.password.$error.required">-->
-          <!--<small class="error" translate="directives.register.passwordRequired"></small>-->
-        <!--</span>-->
-        <!--<span ng-show="registerForm.confirm.$error.match">-->
-          <!--<small class="error" translate="directives.register.passwordConfirm"></small>-->
-        <!--</span>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<button type="submit" class="button tiny radius" translate="directives.register.submit"></button>-->
-  <!--</form>-->
 </div>
