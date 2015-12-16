@@ -1,0 +1,42 @@
+.navigation-notifications-dropdown {
+  width: 280px;
+  border-radius: 4px;
+  color: $color-white;
+  opacity: 0.95;
+  top: 75px;
+  right: 20px;
+  position: absolute;
+  background-color: $color-gray-dark;
+  @media(min-width: $breakpoint-small-retina) {
+    width: 300px;
+  }
+}
+
+.navigation-notifications-dropdown::after {
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid $color-gray-dark;
+  border-left: 5px solid transparent;
+  right: 75px;
+  bottom: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  @media(min-width: $breakpoint-medium) {
+    right: 14px;
+  }
+}
+
+.navigation-notifications-dropdown__element {
+  border-bottom: 1px solid $color-white;
+  cursor: pointer;
+}
+
+.navigation-notifications-dropdown__element:last-child {
+  border: 0;
+}
+
+.navigation-notifications-dropdown__link {
+  padding: 11px 16px;
+  display: block;
+  position: relative;
+}

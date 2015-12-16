@@ -15,6 +15,10 @@
                placeholder="Email"
                ng-model="register.email"
                ng-model-options="{ debounce: 500 }"
+               ng-class="{ 'register__input-group__input_is-error':
+               (registerForm.$submitted || registerForm.email.$touched) && !registerForm.email.$valid,
+                'register__input-group__input_is-completed':
+                (registerForm.$submitted || registerForm.email.$touched) && registerForm.email.$valid }"
                required>
         <span class="register__input-group__failure"
               ng-show="(registerForm.$submitted || registerForm.email.$touched) && registerForm.email.$error.required"
@@ -34,6 +38,10 @@
                ng-model="register.password"
                ng-model-options="{ debounce: 500 }"
                ng-minlength="3"
+               ng-class="{ 'register__input-group__input_is-error':
+               (registerForm.$submitted || registerForm.password.$touched) && !registerForm.password.$valid,
+                'register__input-group__input_is-completed':
+                (registerForm.$submitted || registerForm.password.$touched) && registerForm.password.$valid }"
                required>
         <span class="register__input-group__failure"
               ng-show="(registerForm.$submitted || registerForm.password.$touched) && registerForm.password.$error.minlength"
@@ -46,7 +54,7 @@
         <footer class="register__input-group__description" translate="directives.register.passwordDescription"></footer>
       </section>
       <section class="register__input-group">
-        <h1 class="register__input-group__title">E-Mail</h1>
+        <h1 class="register__input-group__title" translate="directives.register.repeatPassword"></h1>
         <input class="register__input-group__input"
                type="password"
                name="confirm"
@@ -55,6 +63,10 @@
                ng-model-options="{ debounce: 500 }"
                ng-minlength="3"
                repeat-password="register.password"
+               ng-class="{ 'register__input-group__input_is-error':
+               (registerForm.$submitted || registerForm.confirm.$touched) && !registerForm.confirm.$valid,
+                'register__input-group__input_is-completed':
+                (registerForm.$submitted || registerForm.confirm.$touched) && registerForm.confirm.$valid }"
                required>
         <span class="register__input-group__failure"
               ng-show="(registerForm.$submitted || registerForm.confirm.$touched) && registerForm.confirm.$error.match"

@@ -1,0 +1,21 @@
+.navigation-button {
+  width: 40px;
+  height: 40px;
+  font-size: 19px;
+  color: $color-white;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  background-color: $color-blue;
+  transition: background-color, .5s, linear;
+}
+
+.navigation-button_is-active {
+  background-color: $color-blue-light;
+}
+
+.navigation-button:hover {
+  background-color: $color-blue-light;
+}

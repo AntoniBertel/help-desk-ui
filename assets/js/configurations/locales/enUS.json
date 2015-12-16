@@ -13,6 +13,7 @@
   "directives.register.emailInvalid": "Your email is invalid",
   "directives.register.emailDescription": "You will occasionally receive account related emails. We promise not to share your email with anyone.",
   "directives.register.password": "Password",
+  "directives.register.repeatPassword": "Repeat password",
   "directives.register.passwordShort": "Password is too short",
   "directives.register.passwordRequired": "Your password is required",
   "directives.register.passwordConfirm": "Confirm your password",
