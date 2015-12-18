@@ -78,7 +78,9 @@ helpdesk.directive('profileComponent', profileComponent);
  * Helper directives
  */
 import repeatPassword from './directives/helpers/repeat-password';
+import scopeElement from './directives/helpers/scope-element';
 helpdesk.directive('repeatPassword', repeatPassword);
+helpdesk.directive('scopeElement', scopeElement);
 
 /**
  * Services

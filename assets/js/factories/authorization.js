@@ -39,17 +39,17 @@ var authorizationService = function(userFactory, userSessionService, userRolesCo
     },
     isAuthorized: function() {
       var userCredentials = userSessionService.getUser();
-      return userCredentials.userRole && userCredentials.authorizationToken;
+      return (userCredentials.userRole && userCredentials.authorizationToken)? true: false;
     },
     /**
      * @param {array} requiredRoles
      * @returns {boolean}
      */
-    isAuthenticated: function(requiredRoles) {
+    isAuthenticated: function(requiredRoles = String) {
       var userCredentials = userSessionService.getUser();
       var isAll = requiredRoles.indexOf(userRolesConstant.all) !== -1;
       var isHasRequiredRole = this.isAuthorized() && requiredRoles.indexOf(userCredentials.userRole) !== -1;
-      return isAll || isHasRequiredRole;
+      return (isAll || isHasRequiredRole)? true: false;
     }
   }
 };

@@ -1,49 +1,46 @@
 <div class="navigation">
   <section class="navigation__container">
-    <header class="navigation__title">Helpdesk</header>
+    <header class="navigation__title" translate="directives.navigation.title"></header>
     <ul class="navigation__elements">
       <li class="navigation__element">
-        <a class="navigation__link">Gallery</a>
+        <a class="navigation__link" translate="directives.navigation.gallery"></a>
       </li>
       <li class="navigation__element">
-        <a class="navigation__link">About</a>
+        <a class="navigation__link" translate="directives.navigation.about"></a>
       </li>
       <li class="navigation__element">
-        <a class="navigation__link">Log in</a>
+        <a class="navigation__link" translate="directives.navigation.login"></a>
       </li>
       <li class="navigation__element">
-        <a class="navigation__link button">Sign up</a>
+        <a ui-sref="register" class="navigation__link button" translate="directives.navigation.register"></a>
       </li>
-      <li class="navigation__element">
-        <a class="navigation__link navigation__notifications navigation-button">
-          <span class="navigation__notifications__badge">1</span>
+      <li class="navigation__element" scope-element="notifications">
+        <a class="navigation__link navigation__notifications navigation-button" ng-click="toggleNotifications()">
+          <span class="navigation__notifications__badge">{{notificationsCount}}</span>
           <i class="fa fa-bell"></i>
         </a>
-        <ul class="navigation-notifications-dropdown">
-          <li class="navigation-notifications-dropdown__element">
-            <a class="navigation-notifications-dropdown__link">Connection lost</a>
-          </li>
-          <li class="navigation-notifications-dropdown__element">
-            <a class="navigation-notifications-dropdown__link">Connection lost message</a>
+        <ul class="navigation-notifications-dropdown" ng-show="isNotificationsShow">
+          <li class="navigation-notifications-dropdown__element" ng-repeat="notification in notifications">
+            <a class="navigation-notifications-dropdown__link">{{notification}}</a>
           </li>
         </ul>
       </li>
-      <li class="navigation__element">
-        <a class="navigation__link navigation__menu navigation-button">
+      <li class="navigation__element" scope-element="menu">
+        <a class="navigation__link navigation__menu navigation-button" ng-click="toggleMenu()">
           <i class="fa fa-bars"></i>
         </a>
-        <ul class="navigation-menu-dropdown">
+        <ul class="navigation-menu-dropdown" ng-show="isMenuShow">
           <li class="navigation-menu-dropdown__element">
-            <a class="navigation-menu-dropdown__link">Gallery</a>
+            <a class="navigation-menu-dropdown__link" translate="directives.navigation.gallery"></a>
           </li>
           <li class="navigation-menu-dropdown__element">
-            <a class="navigation-menu-dropdown__link">About</a>
+            <a class="navigation-menu-dropdown__link" translate="directives.navigation.about"></a>
           </li>
           <li class="navigation-menu-dropdown__element">
-            <a class="navigation-menu-dropdown__link">Log in</a>
+            <a class="navigation-menu-dropdown__link" translate="directives.navigation.login"></a>
           </li>
           <li class="navigation-menu-dropdown__element">
-            <a class="navigation-menu-dropdown__link">Sign up</a>
+            <a ui-sref="register" class="navigation-menu-dropdown__link" translate="directives.navigation.register"></a>
           </li>
         </ul>
       </li>
