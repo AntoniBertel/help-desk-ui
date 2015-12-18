@@ -19,9 +19,15 @@
           <span class="navigation__notifications__badge">{{notificationsCount}}</span>
           <i class="fa fa-bell"></i>
         </a>
-        <ul class="navigation-notifications-dropdown" ng-show="isNotificationsShow">
+        <ul class="navigation-notifications-dropdown"
+            ng-class="{ 'navigation-notifications-dropdown_is-empty': notifications.length <= 0 }"
+            ng-show="isNotificationsShow">
           <li class="navigation-notifications-dropdown__element" ng-repeat="notification in notifications">
             <a class="navigation-notifications-dropdown__link">{{notification}}</a>
+          </li>
+          <li class="navigation-notifications-dropdown__element"
+              ng-class="{ 'navigation-notifications-dropdown__element_is-empty': notifications.length <= 0 }">
+            <a class="navigation-notifications-dropdown__link" translate="directives.navigation.notifications"></a>
           </li>
         </ul>
       </li>
