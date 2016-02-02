@@ -6,7 +6,7 @@
     </h2>
   </header>
   <section class="register__container">
-    <form name="registerForm" name="registerForm" ng-submit="submit()" novalidate>
+    <form name="registerForm" ng-submit="submit()" novalidate>
       <section class="register__input-group">
         <h1 class="register__input-group__title" translate="directives.register.email"></h1>
         <input class="register__input-group__input"
@@ -32,7 +32,8 @@
       </section>
       <section class="register__input-group">
         <h1 class="register__input-group__title" translate="directives.register.password"></h1>
-        <input class="register__input-group__input" type="password"
+        <input class="register__input-group__input"
+               type="password"
                name="password"
                placeholder="Password"
                ng-model="register.password"

@@ -1,0 +1,118 @@
+.login {
+  max-width: 400px;
+  margin: 94px auto;
+}
+
+.login__button {
+  max-width: 400px;
+  margin: 0 0 0 20px;
+  width: 89.5% // 360 / 400
+}
+
+.login__title {
+  text-align: center;
+  font-size: 175%; // 28 / 16
+  @media(min-width: $breakpoint-small-retina) {
+    font-size: 225%; // 36/16
+  }
+}
+
+.login__title__allocation {
+  color: $color-blue;
+  font-weight: 700;
+}
+
+.login__input-group {
+  position: relative;
+}
+
+.login__input-group:first-child {
+  margin-top: 114px;
+}
+
+.login__input-group:nth-child(2) {
+  margin: 38px 0 38px 0;
+}
+
+.login__input-group__failure {
+  margin: 10px 0 2px 20px;
+  padding: 12px 19px;
+  border-radius: 4px;
+  color: $color-white;
+  display: inline-block;
+  position: relative;
+  background-color: $color-red;
+}
+
+.login__input-group__failure::after {
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid $color-red;
+  border-left: 5px solid transparent;
+  bottom: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.login__input-group__title {
+  margin-left: 24px;
+  float: left;
+  color: $color-gray-dark;
+  font-weight: 700;
+}
+
+.login__input-group__link {
+  margin-right: 23px;
+  float: right;
+  color: $color-blue;
+  cursor: pointer;
+}
+
+.login__input-group__input {
+  max-width: 360px;
+  width: 89.5%; // 360 / 400
+  height: 40px;
+  margin: 4px 0 0 20px;
+  padding: 12px 13px;
+  border: 1px solid $color-gray-light;
+  border-radius: 4px;
+  color: $color-gray-dark-light;
+}
+
+.login__input-group__input:focus {
+  border: 1px solid $color-blue;
+}
+
+.login__input-group__input_is-completed {
+  background-color: $color-white-dark;
+}
+
+.login__input-group__input_is-error {
+  border: 1px solid $color-red;
+}
+
+.bottom-navigation__container {
+  margin: 117px 0 20px 0;
+}
+
+.bottom-navigation__elements {
+  color: $color-blue;
+  text-align: center;
+}
+
+.bottom-navigation__element {
+  display: inline;
+  cursor: pointer;
+}
+
+.bottom-navigation__element:nth-child(n+2) {
+  margin: 0 0 0 16px;
+  @media(min-width: $breakpoint-small-retina) {
+    margin: 0 0 0 35px;
+  }
+}
+
+.botom-navigation__link {
+  text-decoration: none;
+  cursor: pointer;
+}

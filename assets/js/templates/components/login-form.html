@@ -1,48 +1,74 @@
-<div class="login-container">
-  <header>
-    <h1 translate="directives.login.title"></h1>
+<div class="login">
+  <header class="login__title">
+    <h1 class="login__title__main"> {{ 'directives.login.title' | translate }}
+      <b class="login__title__allocation" translate="directives.login.titleAllocation"></b>
+    </h1>
   </header>
-  <form name="loginForm" ng-submit="submit()" novalidate>
-    <div class="group-errors">
-      <span ng-show="submitMessage">
-        <small class="error">
-          {{submitMessage}}
-        </small>
-    </span>
-    </div>
-    <div class="form-group">
-      <input type="email"
-             name="email"
-             placeholder="Email"
-             ng-model="login.email"
-             ng-model-options="{ debounce: 500 }"
-             required>
-      <div class="group-errors" ng-show="loginForm.$submitted || loginForm.email.$touched">
-        <span ng-show="loginForm.email.$error.required">
-            <small class="error" translate="directives.login.emailRequired"></small>
-          </span>
-          <span ng-show="loginForm.email.$error.email">
-            <small class="error" translate="directives.login.emailInvalid"></small>
-          </span>
-      </div>
-    </div>
-    <div class="form-group">
-      <input type="password"
-             name="password"
-             placeholder="Password"
-             ng-model="login.password"
-             ng-model-options="{ debounce: 500 }"
-             ng-minlength="3"
-             required>
-      <div class="group-errors" ng-show="loginForm.$submitted || loginForm.password.$touched">
-        <span ng-show="loginForm.password.$error.minlength">
-          <small class="error" translate="directives.login.passwordShort"></small>
+  <section class="login__container">
+    <form name="loginForm" novalidate ng-submit="submit()">
+      <section class="login__input-group">
+        <h1 class="login__input-group__title" translate="directives.login.email"></h1>
+        <input class="login__input-group__input"
+               type="email"
+               name="email"
+               placeholder="Email"
+               ng-model="login.email"
+               ng-model-options="{ debounce: 500 }"
+               ng-class="{ 'login__input-group__input_is-error':
+               (loginForm.$submitted || loginForm.email.$touched) && !loginForm.email.$valid,
+                'login__input-group__input_is-completed':
+                (loginForm.$submitted || loginForm.email.$touched) && loginForm.email.$valid }"
+               required>
+        <span class="login__input-group__failure"
+              ng-show="(loginForm.$submitted || loginForm.email.$touched) && loginForm.email.$error.required"
+              translate="directives.login.emailRequired">
         </span>
-        <span ng-show="loginForm.password.$error.required">
-          <small class="error" translate="directives.login.passwordRequired"></small>
+        <span class="login__input-group__failure"
+              ng-show="(loginForm.$submitted || loginForm.email.$touched) && loginForm.email.$error.email"
+              translate="directives.login.emailInvalid">
         </span>
-      </div>
-    </div>
-    <button type="submit" class="button tiny radius" translate="directives.login.submit">Submit</button>
-  </form>
+      </section>
+      <section class="login__input-group">
+        <h1 class="login__input-group__title" translate="directives.login.password"></h1>
+        <a class="login__input-group__link" translate="directives.login.passwordForgot"></a>
+        <input class="login__input-group__input"
+               type="password"
+               name="password"
+               placeholder="Password"
+               ng-model="login.password"
+               ng-model-options="{ debounce: 500 }"
+               ng-minlength="3"
+               ng-class="{ 'login__input-group__input_is-error':
+               (loginForm.$submitted || loginForm.password.$touched) && !loginForm.password.$valid,
+                'login__input-group__input_is-completed':
+                (loginForm.$submitted || loginForm.password.$touched) && loginForm.password.$valid }"
+               required>
+        <span class="login__input-group__failure"
+              ng-show="(loginForm.$submitted || loginForm.password.$touched) && loginForm.password.$error.minlength"
+              translate="directives.login.passwordShort">
+        </span>
+        <span class="login__input-group__failure"
+              ng-show="(loginForm.$submitted || loginForm.password.$touched) && loginForm.password.$error.required"
+              translate="directives.login.passwordRequired">
+        </span>
+      </section>
+      <input type="submit" class="button login__button" translate translate-attr-value="directives.login.submit">
+    </form>
+  </section>
+  <section class="bottom-navigation__container">
+    <ul class="bottom-navigation__elements">
+      <li class="bottom-navigation__element">
+        <a class="bottom-navigation__link" translate="directives.login.navigationHome"></a>
+      </li>
+      <li class="bottom-navigation__element">
+        <a class="bottom-navigation__link" translate="directives.login.navigationGallery"></a>
+      </li>
+      <li class="bottom-navigation__element">
+        <a class="bottom-navigation__link" translate="directives.login.navigationAbout"></a>
+      </li>
+      <li class="bottom-navigation__element">
+        <a class="bottom-navigation__link" translate="directives.login.navigationSignup"></a>
+      </li>
+    </ul>
+  </section>
 </div>

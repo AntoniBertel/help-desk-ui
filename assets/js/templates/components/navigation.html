@@ -26,7 +26,7 @@
             <a class="navigation-notifications-dropdown__link">{{notification}}</a>
           </li>
           <li class="navigation-notifications-dropdown__element"
-              ng-class="{ 'navigation-notifications-dropdown__element_is-empty': notifications.length <= 0 }">
+              ng-class="{ 'navigation-notifications-dropdown__element_is-alone': notifications.length <= 0 }">
             <a class="navigation-notifications-dropdown__link" translate="directives.navigation.notifications"></a>
           </li>
         </ul>
