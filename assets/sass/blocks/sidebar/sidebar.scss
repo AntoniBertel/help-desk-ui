@@ -1,0 +1,53 @@
+.sidebar {
+  margin: 40px 0 0 0;
+  float: left;
+  color: $color-blue;
+  font-weight: 700;
+}
+
+.sidebar__element {
+  cursor: pointer;
+  transition: color, 0.5s, linear;
+}
+
+.sidebar__element:hover {
+  color: $color-blue-light;
+}
+
+.sidebar__element_is_active {
+  background-color: $color-gray-dark-blackout;
+}
+
+.sidebar__element_is_active::after {
+  border-top: 7px solid transparent;
+  border-right: 7px solid $color-white;
+  border-bottom: 7px solid transparent;
+  top: 11px;
+  right: 0;
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.sidebar__element__link {
+  width: 240px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  background-color: $color-white-dark;
+}
+
+.sidebar__element__icon {
+  width: 40px;
+  height: 40px;
+  margin: 7px 0 0 9px;
+  float: left;
+  font-size: 24px;
+}
+
+.sidebar__element__title {
+  float: left;
+  line-height: 40px;
+  cursor: pointer;
+}

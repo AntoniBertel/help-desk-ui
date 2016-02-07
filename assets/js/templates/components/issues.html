@@ -1,0 +1,29 @@
+<div class="issues">
+  <ul class="issues__elements">
+    <li class="issues__element"
+        ng-repeat="issue in issues"
+        data-issue-id="{{issue.id}}"
+        ng-click="toggleIssueActivity($event)">
+      <header class="issues__element__title">{{issue.title}}</header>
+      <section class="issues__element__date-added-container">
+        {{ 'directives.issues.dateAdded' | translate }}
+        <time class="issues__element__date-added">{{issue.dateAdded}}</time>
+      </section>
+      <section class="issues__element__last-action-container">
+        {{ 'directives.issues.lastAction' | translate }}
+        <time class="issues__element__last-action">{{issue.lastAction}}</time>
+      </section>
+      <footer class="issues__element__status-container">
+        {{ 'directives.issues.status' | translate }}
+        <span class="issues__element__status"
+              ng-class="{ 'issues__element__status_is_accepted': issue.status == 2,
+               'issues__element_status_is_rejected': issue.status == 3 }">
+          {{issue.status}}
+        </span>
+      </footer>
+      <section class="issues__element__remove">
+        <i class="fa fa-close"></i>
+      </section>
+    </li>
+  </ul>
+</div>

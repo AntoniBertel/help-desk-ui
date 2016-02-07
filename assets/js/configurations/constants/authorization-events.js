@@ -1,6 +1,6 @@
 import angular from 'angular';
 
-var authorizationEvents = {
+const authorizationEvents = {
   loginSuccess: 'event:authLoginSuccess',
   loginFailed: 'event:authLoginFailed',
   logoutSuccess: 'event:authLogoutSuccess',

@@ -36,6 +36,9 @@
   "directives.side.home": "Home",
   "directives.side.issues": "Issues",
   "directives.profile.title": "Profile",
+  "directives.issues.dateAdded": "Date added",
+  "directives.issues.lastAction": "Last action",
+  "directives.issues.status": "Status",
   "response.user.added": "You successful registered",
   "response.user.not.added": "User not added"
 }

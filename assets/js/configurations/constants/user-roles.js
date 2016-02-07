@@ -1,6 +1,6 @@
 import angular from 'angular';
 
-var userRoles = {
+const userRoles = {
   all: 'all',
   common: 'common'
 };

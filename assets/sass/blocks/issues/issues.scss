@@ -1,0 +1,85 @@
+.issues {
+  float: left;
+}
+
+.issues__element {
+  width: 280px;
+  margin: 40px 0 0 40px;
+  padding: 20px;
+  float: left;
+  cursor: pointer;
+  position: relative;
+  background-color: $color-white-dark;
+  transition: background-color, 0.5s, linear;
+}
+
+.issues__element_is_active {
+  background-color: $color-gray-dark-blackout;
+}
+
+.issues__element_is_active .issues__element__remove {
+  opacity: 1;
+  visibility: visible;
+}
+
+.issues__element__remove {
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 100%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: $color-blue;
+  font-size: 78.125%; // 12.5 / 16
+  line-height: 22.5px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  background-color: $color-white-dark;
+  transition: opacity, 0.5s, linear;
+}
+
+.issues__element__title {
+  color: $color-blue;
+  font-size: 112.5%; // 18 / 16
+  font-weight: 700;
+}
+
+.issues__element__date-added-container {
+  margin: 18px 0 0 0;
+  font-weight: 700;
+}
+
+.issues__element__date-added {
+  float: right;
+  font-weight: 400;
+}
+
+.issues__element__last-action-container {
+  margin: 6px 0 0 0;
+  font-weight: 700;
+}
+
+.issues__element__last-action {
+  float: right;
+  font-weight: 400;
+}
+
+.issues__element__status-container {
+  margin: 6px 0 0 0;
+  font-weight: 700;
+}
+
+.issues__element__status {
+  float: right;
+  font-weight: 400;
+}
+
+.issues__element__status_is_accepted {
+  color: $color-green;
+}
+
+.issues__element__status_is_rejected {
+  color: $color-red-light;
+}
