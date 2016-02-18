@@ -1,74 +1,79 @@
-.issues {
-  float: left;
-}
-
-.issues__element {
-  width: 280px;
-  margin: 40px 0 0 40px;
-  padding: 20px;
-  float: left;
+.show-filter {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid $color-gray-light;
+  color: $color-blue;
+  text-align: center;
+  font-weight: 700;
+  line-height: 42px;
   cursor: pointer;
-  position: relative;
+  display: block;
+  transition: all, 0.5s, linear;
   background-color: $color-white-dark;
-  transition: background-color, 0.5s, linear;
+  @media(min-width: $breakpoint-large) {
+    display: none;
+  }
 }
 
-.issues__element_is_active {
+.show-filter:hover {
+  color: $color-blue-light;
   background-color: $color-gray-dark-blackout;
 }
 
-.issues__element_is_active .issues__element__remove {
-  opacity: 1;
-  visibility: visible;
+.issues__element {
+  max-width: 360px;
+  width: 90%; // 360 / 400
+  margin: 20px 0 0 13px;
+  padding: 20px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: $color-white-dark;
+  transition: background-color, 0.5s, linear;
+  @media(min-width: $breakpoint-large) {
+    max-width: 260px;
+  }
 }
 
-.issues__element__remove {
-  width: 20px;
-  height: 20px;
-  top: 0;
-  left: 100%;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  color: $color-blue;
-  font-size: 78.125%; // 12.5 / 16
-  line-height: 22.5px;
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  background-color: $color-white-dark;
-  transition: opacity, 0.5s, linear;
+.issues__element:first-child {
+  @media(max-width: $breakpoint-medium) {
+    margin: 40px 0 0 13px;
+  }
+  @media(min-width: $breakpoint-medium) {
+    margin: 40px 0 0 13px;
+  }
+}
+
+.issues__element:last-child {
+  @media(min-width: $breakpoint-small) {
+    margin: 20px 0 20px 13px;
+  }
+}
+
+.issues__element_is-active {
+  background-color: $color-gray-dark-blackout;
+}
+
+.issues__element:hover {
+  background-color: $color-gray-dark-blackout;
 }
 
 .issues__element__title {
-  color: $color-blue;
+  margin: 0 0 15px 0;
   font-size: 112.5%; // 18 / 16
   font-weight: 700;
+  color: $color-blue;
 }
 
-.issues__element__date-added-container {
-  margin: 18px 0 0 0;
+.issues__element__description {
+  margin: 8px 0 0 0;
+  color: $color-gray-dark;
   font-weight: 700;
+  display: block;
 }
 
-.issues__element__date-added {
+.issues__element__time {
   float: right;
   font-weight: 400;
-}
-
-.issues__element__last-action-container {
-  margin: 6px 0 0 0;
-  font-weight: 700;
-}
-
-.issues__element__last-action {
-  float: right;
-  font-weight: 400;
-}
-
-.issues__element__status-container {
-  margin: 6px 0 0 0;
-  font-weight: 700;
 }
 
 .issues__element__status {
@@ -76,10 +81,10 @@
   font-weight: 400;
 }
 
-.issues__element__status_is_accepted {
+.issues__element__status_is-accepted {
   color: $color-green;
 }
 
-.issues__element__status_is_rejected {
-  color: $color-red-light;
+.issues__element__status_is-rejected {
+  color: $color-red;
 }

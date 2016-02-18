@@ -38,9 +38,15 @@
   "directives.side.home": "Home",
   "directives.side.issues": "Issues",
   "directives.profile.title": "Profile",
+  "directives.issues.showFilters": "Show filters",
   "directives.issues.dateAdded": "Date added",
   "directives.issues.lastAction": "Last action",
   "directives.issues.status": "Status",
+  "directives.issuesFilter.title": "Category",
+  "directives.issuesFilter.status": "Status",
+  "directives.issuesFilter.statusActive": "Active",
+  "directives.issuesFilter.statusAccepted": "Accepted",
+  "directives.issuesFilter.statusRejected": "Rejected",
   "response.user.added": "You successful registered",
   "response.user.not.added": "User not added"
 }
