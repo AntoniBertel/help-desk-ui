@@ -33,6 +33,8 @@
   "directives.navigation.login": "Log in",
   "directives.navigation.register": "Sign up",
   "directives.navigation.notifications": "Go to notifications",
+  "directives.navigation.profile": "Profile",
+  "directives.navigation.signOut": "Sign out",
   "directives.side.home": "Home",
   "directives.side.issues": "Issues",
   "directives.profile.title": "Profile",

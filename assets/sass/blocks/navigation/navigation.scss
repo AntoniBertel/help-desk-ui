@@ -43,6 +43,25 @@
   color: $color-blue-light;
 }
 
+.navigation__element__title {
+  margin: 0 15px 0 0;
+  color: $color-blue;
+  font-size: 112.5%; // 18 / 16
+  font-weight: 700;
+  display: none;
+  @media(min-width: $breakpoint-medium) {
+    display: inline;
+  }
+}
+
+.navigation__link_is-alone {
+  @media(min-width: $breakpoint-medium) {
+    top: -31px;
+    float: right;
+    position: relative;
+  }
+}
+
 .navigation__profile {
   margin: 20px 0 0 0;
 }
@@ -50,6 +69,15 @@
 .navigation__notifications {
   margin: 20px 15px 0 0;
   position: relative;
+}
+
+.navigation__notifications_is-alone {
+  margin: 0 15px 0 0;
+  top: -14px;
+  @media(min-width: $breakpoint-medium) {
+    margin: 20px 15px 0 0;
+    top: 0;
+  }
 }
 
 .navigation__notifications__badge {
@@ -71,4 +99,8 @@
   @media(min-width: $breakpoint-medium) {
     display: none;
   }
+}
+
+.navigation__menu_is-alone {
+  display: block;
 }

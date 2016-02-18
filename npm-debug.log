@@ -1,0 +1,42 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'rebuild',
+1 verbose cli   'node-sass' ]
+2 info using npm@3.6.0
+3 info using node@v5.6.0
+4 info readInstalled object
+5 verbose rebuild path, id [ '/home/workflowboxvm/WorkflowBoxVM/helpdesk/node_modules/node-sass',
+5 verbose rebuild   'node-sass@3.4.2' ]
+6 silly rebuild set [ '/home/workflowboxvm/WorkflowBoxVM/helpdesk/node_modules/node-sass' ]
+7 info build /home/workflowboxvm/WorkflowBoxVM/helpdesk/node_modules/node-sass
+8 info lifecycle node-sass@3.4.2~preinstall: node-sass@3.4.2
+9 silly lifecycle node-sass@3.4.2~preinstall: no script for preinstall, continuing
+10 info linkStuff node-sass@3.4.2
+11 silly linkStuff node-sass@3.4.2 has /home/workflowboxvm/WorkflowBoxVM/helpdesk/node_modules as its parent node_modules
+12 verbose linkBins node-sass@3.4.2
+13 verbose link bins [ { 'node-sass': 'bin/node-sass' },
+13 verbose link bins   '/home/workflowboxvm/WorkflowBoxVM/helpdesk/node_modules/.bin',
+13 verbose link bins   false ]
+14 verbose linkMans node-sass@3.4.2
+15 verbose rebuildBundles node-sass@3.4.2
+16 silly gentlyRm /home/workflowboxvm/WorkflowBoxVM/helpdesk/node_modules/.bin/node-sass is being purged
+17 verbose gentlyRm don't care about contents; nuking /home/workflowboxvm/WorkflowBoxVM/helpdesk/node_modules/.bin/node-sass
+18 verbose stack Error: EROFS: read-only file system, symlink '../node-sass/bin/node-sass' -> '/home/workflowboxvm/WorkflowBoxVM/helpdesk/node_modules/.bin/node-sass'
+18 verbose stack     at Error (native)
+19 verbose cwd /home/workflowboxvm/WorkflowBoxVM/helpdesk
+20 error Linux 3.19.0-25-generic
+21 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "rebuild" "node-sass"
+22 error node v5.6.0
+23 error npm  v3.6.0
+24 error path ../node-sass/bin/node-sass
+25 error code EROFS
+26 error errno -30
+27 error syscall symlink
+28 error rofs EROFS: read-only file system, symlink '../node-sass/bin/node-sass' -> '/home/workflowboxvm/WorkflowBoxVM/helpdesk/node_modules/.bin/node-sass'
+29 error rofs This is most likely not a problem with npm itself
+29 error rofs and is related to the file system being read-only.
+29 error rofs
+29 error rofs Often virtualized file systems, or other file systems
+29 error rofs that don't support symlinks, give this error.
+30 verbose exit [ -30, true ]

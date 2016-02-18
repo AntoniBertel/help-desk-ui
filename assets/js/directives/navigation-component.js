@@ -10,10 +10,12 @@ var navigationComponent = (authorizationFactory) => {
       $scope.isMenuShow = false;
       $scope.toggleMenu = () => {
         $scope.isMenuShow = !$scope.isMenuShow;
+        $scope.isNotificationsShow = false;
       };
       $scope.isNotificationsShow = false;
       $scope.toggleNotifications = () => {
         $scope.isNotificationsShow = !$scope.isNotificationsShow;
+        $scope.isMenuShow = false;
       };
       $scope.notificationsCount = 1;
       $scope.notifications = ['Connection lost', 'Connection lost message'];
@@ -37,7 +39,7 @@ var navigationComponent = (authorizationFactory) => {
             $scope.isMenuShow = false;
           });
         }
-      })
+      });
     },
     templateUrl: 'assets/js/templates/components/navigation.html'
   }
