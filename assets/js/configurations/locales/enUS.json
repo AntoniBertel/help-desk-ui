@@ -38,6 +38,7 @@
   "directives.side.home": "Home",
   "directives.side.issues": "Issues",
   "directives.profile.title": "Profile",
+  "directives.sidebar.issues": "Issues",
   "directives.issues.showFilters": "Show filters",
   "directives.issues.dateAdded": "Date added",
   "directives.issues.lastAction": "Last action",

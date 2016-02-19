@@ -8,6 +8,8 @@
   background-color: $color-white-dark;
   @media(min-width: $breakpoint-large) {
     max-width: 280px;
+    margin: 20px 0 0 17px;
+    float: right;
   }
 }
 

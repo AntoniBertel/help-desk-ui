@@ -1,12 +1,25 @@
 .sidebar {
-  margin: 40px 0 0 0;
-  float: left;
-  color: $color-blue;
-  font-weight: 700;
+  margin: 20px 20px 0 0;
+  display: none;
+  @media(min-width: $breakpoint-large) {
+    display: block;
+    float: left;
+  }
+}
+
+.sidebar__background {
+  position: absolute;
+  background-color: $color-white-dark;
 }
 
 .sidebar__element {
+  width: 240px;
+  padding: 8px;
+  color: $color-blue;
+  font-weight: 700;
   cursor: pointer;
+  position: relative;
+  background-color: $color-white-dark;
   transition: color, 0.5s, linear;
 }
 
@@ -14,40 +27,23 @@
   color: $color-blue-light;
 }
 
-.sidebar__element_is_active {
+.sidebar__element_is-active {
   background-color: $color-gray-dark-blackout;
 }
 
-.sidebar__element_is_active::after {
-  border-top: 7px solid transparent;
-  border-right: 7px solid $color-white;
-  border-bottom: 7px solid transparent;
-  top: 11px;
+.sidebar__element_is-active::after {
+  border-top: 5px solid transparent;
+  border-right: 5px solid $color-white;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+  top: 14px;
   right: 0;
   content: "";
   display: block;
   position: absolute;
 }
 
-.sidebar__element__link {
-  width: 240px;
-  height: 40px;
-  overflow: hidden;
-  position: relative;
-  display: block;
-  background-color: $color-white-dark;
-}
-
 .sidebar__element__icon {
-  width: 40px;
-  height: 40px;
-  margin: 7px 0 0 9px;
-  float: left;
-  font-size: 24px;
-}
-
-.sidebar__element__title {
-  float: left;
-  line-height: 40px;
-  cursor: pointer;
+  margin: 0 13px 0 0;
+  font-size: 118.75%; // 19 / 16
 }

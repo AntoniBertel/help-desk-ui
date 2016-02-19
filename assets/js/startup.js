@@ -70,6 +70,8 @@ import sideComponent from './directives/side-component';
 import profileComponent from './directives/profile-component';
 import sidebarComponent from './directives/sidebar-component';
 import issuesComponent from './directives/issues-component';
+import issuesElementsComponent from './directives/issues-elements-component';
+import issuesFilterComponent from './directives/issues-filter-component';
 helpdesk.directive('loginComponent', loginComponent);
 helpdesk.directive('registerComponent', registerComponent);
 helpdesk.directive('navigationComponent', navigationComponent);
@@ -77,6 +79,8 @@ helpdesk.directive('sideComponent', sideComponent);
 helpdesk.directive('profileComponent', profileComponent);
 helpdesk.directive('sidebarComponent', sidebarComponent);
 helpdesk.directive('issuesComponent', issuesComponent);
+helpdesk.directive('issuesElementsComponent', issuesElementsComponent);
+helpdesk.directive('issuesFilterComponent', issuesFilterComponent);
 
 /**
  * Helper directives
@@ -106,10 +110,12 @@ helpdesk.factory('userFactory', userFactory);
  * Constants
  */
 import authorizationEventsConstant from './configurations/constants/authorization-events';
+import filterEventsConstant from './configurations/constants/filter-events';
 import userRolesConstant from './configurations/constants/user-roles';
 import configurationConstant from './configurations/configuration';
 import issueStatusesConstant from './configurations/constants/issue-statuses';
 helpdesk.constant('authorizationEventsConstant', authorizationEventsConstant);
+helpdesk.constant('filterEventsConstant', filterEventsConstant);
 helpdesk.constant('userRolesConstant', userRolesConstant);
 helpdesk.constant('configurationConstant', configurationConstant);
 helpdesk.constant('issueStatusesConstant', issueStatusesConstant);

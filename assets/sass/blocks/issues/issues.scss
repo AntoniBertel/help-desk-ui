@@ -20,32 +20,28 @@
   background-color: $color-gray-dark-blackout;
 }
 
+.issues__elements {
+  margin: 19px 0 20px 0;
+  @media(min-width: $breakpoint-large) {
+    margin: 19px 0 0 40px;
+  }
+}
+
 .issues__element {
-  max-width: 360px;
+  max-width: 280px;
   width: 90%; // 360 / 400
-  margin: 20px 0 0 13px;
+  margin: 20px 0 0 20px;
   padding: 20px;
   display: inline-block;
   cursor: pointer;
   background-color: $color-white-dark;
   transition: background-color, 0.5s, linear;
+  @media(min-width: $breakpoint-small-retina) {
+    max-width: 320px;
+  }
   @media(min-width: $breakpoint-large) {
     max-width: 260px;
-  }
-}
-
-.issues__element:first-child {
-  @media(max-width: $breakpoint-medium) {
-    margin: 40px 0 0 13px;
-  }
-  @media(min-width: $breakpoint-medium) {
-    margin: 40px 0 0 13px;
-  }
-}
-
-.issues__element:last-child {
-  @media(min-width: $breakpoint-small) {
-    margin: 20px 0 20px 13px;
+    margin: 20px 16px 0 19px;
   }
 }
 
