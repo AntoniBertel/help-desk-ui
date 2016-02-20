@@ -60,6 +60,9 @@
   border-radius: 4px;
   background-color: $color-white;
   position: absolute;
+  @media(min-width: $breakpoint-large) {
+    max-width: 230px;
+  }
 }
 
 .issues-filter__dropdown::after {

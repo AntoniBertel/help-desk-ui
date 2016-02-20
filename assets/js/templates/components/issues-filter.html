@@ -20,7 +20,8 @@
       <li class="issues-filter__selected-category"
           ng-repeat="selectedElement in selectedElements">
         {{ selectedElement }}
-        <i class="issues-filter__selected-category__close fa fa-close"></i>
+        <i class="issues-filter__selected-category__close fa fa-close"
+           ng-click="removeElement()"></i>
       </li>
     </ul>
     <header class="issues-filter__status" translate="directives.issuesFilter.status"></header>

@@ -8,6 +8,7 @@ var issuesFilterComponent = () => {
     replace: true,
     controller: function($scope, filterEventsConstant) {
       $scope.isFilterShow = false;
+      $scope.currentStatus = null;
       $scope.toggleFilter = () => {
         $scope.isFilterShow = !$scope.isFilterShow;
       };
@@ -15,8 +16,11 @@ var issuesFilterComponent = () => {
         $scope.currentSelect = 'Network';
         $scope.$emit(filterEventsConstant.filterElementAdd, $scope.currentSelect);
       };
+      $scope.removeElement = () => {
+        $scope.selectedElements;
+      };
     },
-    link: function($scope) {
+    link: function($scope, issueStatusesConstant) {
       $scope.currentSelect = 'Network';
       $scope.filterElements = ['Network', 'SEO'];
       $scope.selectedElements = ['Network', 'SEO'];

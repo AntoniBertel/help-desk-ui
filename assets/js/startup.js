@@ -79,7 +79,7 @@ helpdesk.directive('sideComponent', sideComponent);
 helpdesk.directive('profileComponent', profileComponent);
 helpdesk.directive('sidebarComponent', sidebarComponent);
 helpdesk.directive('issuesComponent', issuesComponent);
-helpdesk.directive('issuesElementsComponent', issuesElementsComponent);
+helpdesk.directive('issuesElementsComponent', issuesElementsComponent)
 helpdesk.directive('issuesFilterComponent', issuesFilterComponent);
 
 /**
