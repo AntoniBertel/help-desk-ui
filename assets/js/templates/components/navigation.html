@@ -1,6 +1,9 @@
 <div class="navigation">
   <section class="navigation__container">
-    <header class="navigation__title" translate="directives.navigation.title"></header>
+    <header class="navigation__title"
+            translate="directives.navigation.title"
+            ng-class="{ 'navigation__title_is-short': isAuthorized }">
+    </header>
     <ul class="navigation__elements">
       <li class="navigation__element" ng-show="!isAuthorized">
         <a class="navigation__link" translate="directives.navigation.gallery"></a>
@@ -14,22 +17,21 @@
       <li class="navigation__element" ng-show="!isAuthorized">
         <a ui-sref="register" class="navigation__link button" translate="directives.navigation.register"></a>
       </li>
-      <!--<li class="navigation__element" ng-show="isAuthorized" scope-element="menu">-->
-        <!--<header class="navigation__element__title">Username</header>-->
-        <!--<img src="assets/img/avatar.png"-->
-             <!--class="navigation__link navigation__link_is-alone navigation__menu navigation__menu_is-alone navigation-button"-->
-             <!--ng-click="toggleMenu()">-->
-        <!--<ul class="navigation-menu-dropdown"-->
-            <!--ng-class="{ 'navigation-menu-dropdown_is-alone': isAuthorized }"-->
-            <!--ng-show="isMenuShow">-->
-          <!--<li class="navigation-menu-dropdown__element">-->
-            <!--<a class="navigation-menu-dropdown__link" translate="directives.navigation.profile"></a>-->
-          <!--</li>-->
-          <!--<li class="navigation-menu-dropdown__element">-->
-            <!--<a class="navigation-menu-dropdown__link" translate="directives.navigation.signOut"></a>-->
-          <!--</li>-->
-        <!--</ul>-->
-      <!--</li>-->
+      <li class="navigation__element" ng-show="isAuthorized" scope-element="profile">
+        <header class="navigation__element__title">Username</header>
+        <img src="assets/img/avatar.png"
+             class="navigation__link navigation__menu navigation__menu_is-alone navigation__menu_is-alone navigation-button"
+             ng-click="toggleProfile()">
+        <ul class="navigation-menu-dropdown navigation-menu-dropdown_is-alone"
+            ng-show="isProfileShow">
+          <li class="navigation-menu-dropdown__element">
+            <a class="navigation-menu-dropdown__link" translate="directives.navigation.profile"></a>
+          </li>
+          <li class="navigation-menu-dropdown__element">
+            <a class="navigation-menu-dropdown__link" translate="directives.navigation.signOut"></a>
+          </li>
+        </ul>
+      </li>
       <li class="navigation__element" scope-element="notifications">
         <a class="navigation__link navigation__notifications navigation-button"
            ng-click="toggleNotifications()">

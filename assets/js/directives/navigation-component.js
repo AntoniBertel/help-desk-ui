@@ -11,10 +11,18 @@ var navigationComponent = (authorizationFactory) => {
       $scope.toggleMenu = () => {
         $scope.isMenuShow = !$scope.isMenuShow;
         $scope.isNotificationsShow = false;
+        $scope.isProfileShow = false;
       };
       $scope.isNotificationsShow = false;
       $scope.toggleNotifications = () => {
         $scope.isNotificationsShow = !$scope.isNotificationsShow;
+        $scope.isMenuShow = false;
+        $scope.isProfileShow = false;
+      };
+      $scope.isProfileShow = false;
+      $scope.toggleProfile = () => {
+        $scope.isProfileShow = !$scope.isProfileShow;
+        $scope.isNotificationsShow = false;
         $scope.isMenuShow = false;
       };
       $scope.notificationsCount = 1;
@@ -37,6 +45,14 @@ var navigationComponent = (authorizationFactory) => {
         if(!isMenuClicked) {
           $scope.$apply(function() {
             $scope.isMenuShow = false;
+          });
+        }
+        var isProfileClicked = $scope.scopeElements.profile.filter((element) => {
+          return event.target.closest(`.${lodash.first(element).className}`);
+        }).length > 0;
+        if(!isProfileClicked) {
+          $scope.$apply(function() {
+            $scope.isProfileShow = false;
           });
         }
       });

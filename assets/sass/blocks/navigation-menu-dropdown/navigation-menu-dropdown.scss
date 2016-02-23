@@ -12,6 +12,14 @@
   }
 }
 
+.navigation-menu-dropdown_is-alone {
+  right: 138px;
+  @media(min-width: $breakpoint-medium) {
+    right: 98px;
+    display: block;
+  }
+}
+
 .navigation-menu-dropdown::after {
   border-right: 5px solid transparent;
   border-bottom: 5px solid $color-blue;

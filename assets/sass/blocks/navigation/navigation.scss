@@ -11,10 +11,18 @@
 
 .navigation__title {
   margin: 22px 0 0 17px;
-  font-size: 225%; // 36/16
+  font-size: 225%; // 36 / 16
   font-weight: 700;
   color: $color-blue;
   float: left;
+}
+
+.navigation__title_is-short {
+  font-size: 153.12%; // 24.5 / 16
+  line-height: 36px;
+  @media(min-width: $breakpoint-small-retina) {
+    font-size: 225%; // 36 / 16
+  }
 }
 
 .navigation__elements {
@@ -81,5 +89,19 @@
   margin: 20px 20px 0 0;
   @media(min-width: $breakpoint-medium) {
     display: none;
+  }
+}
+
+.navigation__menu_is-alone {
+  width: 40px;
+  height: 40px;
+  margin: 0 14px 0 0;
+  top: 14px;
+  display: inline-block;
+  position: relative;
+  background-color: $color-black-light;
+  @media(min-width: $breakpoint-medium) {
+    margin: 0 35px 0 0;
+    display: inline-block;
   }
 }
